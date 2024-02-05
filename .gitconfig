@@ -1,0 +1,8 @@
+[user]
+	name = Mircea Staicu
+	email = md.staicu@yahoo.com
+	signingkey = /Users/mircea/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/24a08024a9e5c79ddda51c0737814718.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
