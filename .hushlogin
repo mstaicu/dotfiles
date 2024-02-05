@@ -1,0 +1,1 @@
+# This file is used to suppress printing the last login time and /etc/motd , if the sshd_config keywords PrintLastLog and PrintMotd, respectively, are enabled. It does not suppress printing of the banner specified by the sshd_config keyword Banner
