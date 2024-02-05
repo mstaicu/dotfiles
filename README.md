@@ -24,6 +24,12 @@ brew install secretive --cask
 brew install stow
 ```
 
+### ZSH prompt
+
+```
+brew install pure
+```
+
 ### Command line formatting
 
 ```
