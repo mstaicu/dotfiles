@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "gruvbox-material-icon-theme",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.guides.bracketPairs": true,
+    "editor.tabSize": 2,
+    "editor.wrappingIndent": "deepIndent",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "workbench.enableExperiments": false,
+    "update.showReleaseNotes": false,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyleInactive": "line",
+    "terminal.integrated.cursorStyle": "line"
+}
