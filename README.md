@@ -24,10 +24,11 @@ brew install secretive --cask
 brew install stow
 ```
 
-### ZSH prompt
+### ZSH prompt ( Pure )
 
 ```
-brew install pure
+mkdir -p "$HOME/.zsh"
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 ```
 
 ### Command line formatting
@@ -41,7 +42,8 @@ brew install bat zsh-syntax-highlighting tree
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com/mstaicu/dotfiles.git
+$ cd $HOME
+$ git clone git@github.com/mstaicu/dotfiles.git .dotfiles
 $ cd .dotfiles
 ```
 
@@ -56,3 +58,4 @@ if you have existing files in your $HOME folder
 ```
 $ stow --adopt .
 ```
+
