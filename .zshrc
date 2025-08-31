@@ -1,4 +1,4 @@
-#
+
 # https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#Widgets
 #
 # If you are looking for functions to implement moving over and editing words in the manner of bash, 
@@ -38,3 +38,15 @@ alias cat='bat --style=plain'
 # https://github.com/zsh-users/zsh-syntax-highlighting?tab=readme-ov-file#faq
 #
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Persistent history settings
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+# History behavior
+setopt SHARE_HISTORY         # Share history across tabs
+setopt INC_APPEND_HISTORY    # Write history as you go
+setopt HIST_IGNORE_ALL_DUPS  # No duplicate entries
+setopt HIST_REDUCE_BLANKS    # Clean up extra spaces
+setopt HIST_FCNTL_LOCK
