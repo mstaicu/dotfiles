@@ -2,16 +2,20 @@
 	name = Mircea Staicu
 	email = md.staicu@yahoo.com
 	signingkey = /Users/mircea/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/24a08024a9e5c79ddda51c0737814718.pub
+
+[core]
+	excludesfile = ~/.config/git/ignore
+
 [gpg]
 	format = ssh
+
 [commit]
 	gpgsign = true
+
 [init]
 	defaultBranch = master
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-# [includeIf "gitdir:~/.dotfiles/"]
-	# path = ~/.config/git/config
+
+# ---- Per-project config includes ----
+
+[includeIf "gitdir:~/work/projects/mircea/eonnext-mobile/"]
+        path = ~/.config/git/eonnext.config

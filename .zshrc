@@ -38,6 +38,7 @@ command -v kubectl &>/dev/null && source <(kubectl completion zsh)
 command -v flux &>/dev/null && source <(flux completion zsh)
 command -v docker &>/dev/null && source <(docker completion zsh)
 command -v skaffold &>/dev/null && source <(skaffold completion zsh)
+command -v helm &>/dev/null && source <(helm completion zsh)
 
 # ----- Aliases -----
 # $ man ls
