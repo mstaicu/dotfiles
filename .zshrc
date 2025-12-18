@@ -10,17 +10,11 @@
 autoload -Uz select-word-style
 select-word-style bash
 
-#
-#
 # --------------------------------------
 # https://github.com/sindresorhus/pure
 # --------------------------------------
-#
-#
 
-# ----- Prompt (using pure theme) -----
-
-fpath+=($HOME/.zsh/pure)
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # https://wiki.archlinux.org/title/Zsh#Prompt_themes
 autoload -Uz promptinit && promptinit
@@ -61,3 +55,4 @@ setopt INC_APPEND_HISTORY    # Write history as you go
 setopt HIST_IGNORE_ALL_DUPS  # No duplicate entries
 setopt HIST_REDUCE_BLANKS    # Clean up extra spaces
 setopt HIST_FCNTL_LOCK       # Safe concurrent access
+
