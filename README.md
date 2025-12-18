@@ -6,35 +6,11 @@ This directory contains the dotfiles for my system
 
 Ensure you have the following installed on your system
 
-### Git
-
-```
-brew install git
-```
-
-### Secretive
-
-```
-brew install secretive --cask
-```
-
-### Stow
-
-```
-brew install stow
-```
-
 ### ZSH prompt ( Pure )
 
 ```
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-```
-
-### Command line formatting
-
-```
-brew install bat zsh-syntax-highlighting tree
 ```
 
 ## Installation
