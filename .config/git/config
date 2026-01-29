@@ -15,7 +15,5 @@
 [init]
 	defaultBranch = master
 
-# ---- Per-project config includes ----
-
-[includeIf "gitdir:~/work/projects/mircea/eonnext-mobile/"]
+[includeIf "gitdir:~/work/projects/eon/**"]
         path = ~/.config/git/eonnext.config
