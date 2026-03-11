@@ -45,14 +45,21 @@ alias cat='bat --style=plain'
 # https://github.com/zsh-users/zsh-syntax-highlighting?tab=readme-ov-file#faq
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# ----- History -----
-HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
+# --- History Configuration ---
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=100000
+export SAVEHIST=100000
 
-setopt SHARE_HISTORY         # Share history across tabs
-setopt INC_APPEND_HISTORY    # Write history as you go
-setopt HIST_IGNORE_ALL_DUPS  # No duplicate entries
-setopt HIST_REDUCE_BLANKS    # Clean up extra spaces
-setopt HIST_FCNTL_LOCK       # Safe concurrent access
+# 1. Essential: Share history across all sessions immediately
+setopt SHARE_HISTORY
 
+# 2. Add timestamps (required for good history management)
+setopt EXTENDED_HISTORY
+
+# 3. Clean up history
+setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicate entries if a new one is added
+setopt HIST_REDUCE_BLANKS      # Remove extra spaces
+setopt HIST_IGNORE_SPACE       # Don't save commands starting with a space (great for passwords)
+
+# 4. Set safety/locking
+setopt HIST_FCNTL_LOCK         # Prevents corruption when multiple tabs write at once
