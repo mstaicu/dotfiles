@@ -24,5 +24,6 @@
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
