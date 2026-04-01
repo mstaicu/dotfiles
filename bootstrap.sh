@@ -24,7 +24,7 @@ echo "📦 Installing Brew bundle..."
 brew bundle --file="Brewfile"
 
 echo "🔗 Stowing dotfiles..."
-stow vim zsh vscode ssh
+stow --restow vim zsh vscode ssh config
 
 if command -v vim &>/dev/null; then
   echo "🧠 Installing Vim plugins..."
