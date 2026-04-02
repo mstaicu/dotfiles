@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "🚀 Starting bootstrap..."
+echo "🚀 starting"
 
 if ! command -v brew &>/dev/null; then
   echo "🍺 installing homebrew..."
@@ -17,15 +17,15 @@ elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-echo "📦 installing Brew bundle..."
+echo "📦 installing brew bundle..."
 brew bundle --file="Brewfile"
 
 echo "🔗 stowing dotfiles..."
 stow --restow vim zsh vscode ssh config
 
 if command -v vim &>/dev/null; then
-  echo "🧠 installing Vim plugins..."
+  echo "🧠 installing vim plugins..."
   vim +PlugInstall +qall || true
 fi
 
-echo "✅ bootstrap complete!"
+echo "✅ complete!"
