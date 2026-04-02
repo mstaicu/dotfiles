@@ -11,7 +11,7 @@ dotfiles/
 ├── vim/                # Vim config
 ├── zsh/                # shell config
 ├── vscode/             # VS Code settings
-├── .iterm2/            # iTerm2 preferences & profiles
+├── iterm2/             # iTerm2 preferences & profiles
 ├── ssh/                # SSH config (no private keys)
 ├── config/             # ~/.config programs
 ```
@@ -89,7 +89,7 @@ brew bundle dump --file=~/dotfiles/Brewfile --force
 Preferences are stored in:
 
 ```bash
-~/.dotfiles/.iterm2
+~/.dotfiles/iterm2
 ```
 
 To enable:
@@ -99,7 +99,7 @@ To enable:
 * Set path to:
 
 ```bash
-~/.dotfiles/.iterm2
+~/.dotfiles/iterm2
 ```
 
 ---
