@@ -1,52 +1,112 @@
+# -----------------------------
+# Taps
+# -----------------------------
 tap "fluxcd/tap"
 tap "hashicorp/tap"
 tap "nats-io/nats-tools"
 tap "patrickdappollonio/tap"
-brew "age"
-brew "awscli"
+
+
+# -----------------------------
+# Core CLI tools
+# -----------------------------
 brew "bat"
-brew "bind"
-brew "cocoapods"
-brew "doctl"
-brew "ffmpeg"
-brew "gnupg"
-brew "harfbuzz"
-brew "helm"
-brew "ios-deploy"
 brew "jq"
-brew "ksops"
-brew "kubernetes-cli"
-brew "kustomize"
-brew "libass"
-brew "mkcert"
-brew "ncftp"
-brew "node"
-brew "openjdk"
-brew "pango"
-brew "pure"
-brew "rbenv"
-brew "skaffold"
-brew "sops"
-brew "step"
-brew "stow"
-brew "tesseract"
+# brew "yq"
 brew "tree"
-brew "unar"
-brew "watch"
-brew "yarn"
-brew "yq"
-brew "yt-dlp"
-brew "zsh-syntax-highlighting"
+# brew "watch"
+brew "stow"
+
+
+# -----------------------------
+# Development (languages & runtimes)
+# -----------------------------
+brew "node"
+# brew "yarn"
+# brew "rbenv"
+# brew "openjdk"
+
+
+# -----------------------------
+# Kubernetes / DevOps
+# -----------------------------
+brew "kubernetes-cli"
+# brew "helm"
+brew "kustomize"
+brew "skaffold"
 brew "fluxcd/tap/flux"
+brew "patrickdappollonio/tap/kubectl-slice"
+
+
+# -----------------------------
+# Cloud / Infrastructure
+# -----------------------------
+# brew "awscli"
+brew "doctl"
+# brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/packer"
-brew "hashicorp/tap/terraform"
+
+
+# -----------------------------
+# Security / Secrets
+# -----------------------------
+# brew "gnupg"
+brew "sops"
+brew "age"
+# brew "step"
+
+
+# -----------------------------
+# Mobile / React Native
+# -----------------------------
+# brew "cocoapods"
+# brew "ios-deploy"
+
+
+# -----------------------------
+# Messaging / Streaming
+# -----------------------------
 brew "nats-io/nats-tools/nats"
 brew "nats-io/nats-tools/nsc"
-brew "patrickdappollonio/tap/kubectl-slice"
-cask "lm-studio"
+
+
+# -----------------------------
+# Networking / Utilities
+# -----------------------------
+# brew "bind"
+brew "ncftp"
+brew "mkcert"
+
+
+# -----------------------------
+# Media / Processing (optional)
+# -----------------------------
+brew "ffmpeg"
+brew "yt-dlp"
+# brew "tesseract"
+# brew "unar"
+
+
+# -----------------------------
+# Shell enhancements
+# -----------------------------
+brew "zsh-syntax-highlighting"
+brew "pure"
+
+
+# -----------------------------
+# Applications
+# -----------------------------
+cask "iterm2"
+cask "visual-studio-code"
+
+# Useful apps
+# cask "slack"
 cask "mitmproxy"
-cask "rekordbox"
+# cask "lm-studio"
 cask "secretive"
-cask "slack"
-cask "soulseek"
-cask "webull"
+
+# Personal / optional
+# cask "rekordbox"
+# cask "soulseek"
+# cask "webull"
