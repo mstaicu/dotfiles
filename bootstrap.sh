@@ -3,15 +3,12 @@ set -e
 
 echo "🚀 Starting bootstrap..."
 
-# Always run from repo root
-cd "$(dirname "$0")"
-
 if ! command -v brew &>/dev/null; then
-  echo "🍺 Installing Homebrew..."
+  echo "🍺 installing homebrew..."
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Load brew into current shell
+# load brew into current shell
 if command -v brew &>/dev/null; then
   eval "$(brew shellenv)"
 elif [[ -x /opt/homebrew/bin/brew ]]; then
@@ -20,15 +17,15 @@ elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-echo "📦 Installing Brew bundle..."
+echo "📦 installing Brew bundle..."
 brew bundle --file="Brewfile"
 
-echo "🔗 Stowing dotfiles..."
+echo "🔗 stowing dotfiles..."
 stow --restow vim zsh vscode ssh config
 
 if command -v vim &>/dev/null; then
-  echo "🧠 Installing Vim plugins..."
+  echo "🧠 installing Vim plugins..."
   vim +PlugInstall +qall || true
 fi
 
-echo "✅ Bootstrap complete!"
+echo "✅ bootstrap complete!"

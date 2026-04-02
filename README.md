@@ -1,100 +1,117 @@
-# Dotfiles
-
-This repository contains my personal dotfiles, managed with GNU Stow for easy setup across machines.
+# dotfiles
 
 ---
 
 ## 📦 Structure
 
-Each tool/config is isolated in its own folder:
-
-```
+```text
 dotfiles/
-├── vim/        # Vim config + plugins (via vim-plug)
-├── zsh/        # Shell config (.zshrc, .zprofile, etc.)
-├── vscode/     # VS Code settings
-├── ssh/        # SSH config (no private keys)
-├── config/     # ~/.config programs
+├── bootstrap.sh        # setup script
+├── Brewfile            # packages (Homebrew)
+├── vim/                # Vim config
+├── zsh/                # shell config
+├── vscode/             # VS Code settings
+├── .iterm2/            # iTerm2 preferences & profiles
+├── ssh/                # SSH config (no private keys)
+├── config/             # ~/.config programs
 ```
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repo into your home directory:
+Clone into your home directory:
 
+```bash
+git clone git@github.com:mstaicu/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ```
-cd $HOME
-git clone git@github.com/mstaicu/dotfiles.git .dotfiles
-cd .dotfiles
-```
 
----
+Run bootstrap:
 
-## 🔗 Apply dotfiles with Stow
-
-Instead of stowing everything at once, stow each package individually:
-
-```
-stow vim
-stow zsh
-stow vscode
-stow config
-stow ssh
+```bash
+./bootstrap.sh
 ```
 
 ---
 
-## ♻️ Migrating existing configs
+## 🚀 What bootstrap does
 
-If you already have existing files in `$HOME`, you can adopt them:
+The script will:
 
-```
-stow --adopt vim zsh vscode config ssh
-```
-
-⚠️ Review changes before committing — this moves files into the repo.
+* Install Homebrew (if missing)
+* Install packages from `Brewfile`
+* Symlink dotfiles using GNU Stow
+* Install Vim plugins
 
 ---
 
-## 🧩 Vim setup
+## 🔗 Dotfiles management (Stow)
 
-This repo uses **vim-plug** for plugin management.
+Each tool is managed as its own package:
 
-After stowing:
-
+```bash
+stow vim zsh vscode ssh config
 ```
+
+To update symlinks:
+
+```bash
+stow --restow <package>
+```
+
+---
+
+## 🍺 Homebrew
+
+Packages are defined in:
+
+```bash
+Brewfile
+```
+
+Install / sync:
+
+```bash
+brew bundle
+```
+
+Export current setup:
+
+```bash
+brew bundle dump --file=~/dotfiles/Brewfile --force
+```
+
+---
+
+## 🖥️ iTerm2
+
+Preferences are stored in:
+
+```bash
+~/.dotfiles/.iterm2
+```
+
+To enable:
+
+* Open iTerm2 → Preferences → General
+* Enable **“Load preferences from a custom folder”**
+* Set path to:
+
+```bash
+~/.dotfiles/.iterm2
+```
+
+---
+
+## 🧠 Vim
+
+Uses `vim-plug` for plugin management.
+
+Install plugins:
+
+```bash
 vim +PlugInstall +qall
 ```
 
-This installs plugins like Gruvbox automatically.
-
 ---
-
-## 🖥️ VS Code setup
-
-VS Code settings are symlinked to:
-
-```
-~/Library/Application Support/Code/User/settings.json
-```
-
-After stowing, restart Visual Studio Code to apply changes.
-
----
-
-## 🔒 SSH notes
-
-Only safe files (like `config`) are tracked.
-
-Private keys are **not committed**. Those are managed by Secretive
-
----
-
-## 🧠 Notes
-
-* Do **not** use `stow .`
-* Always stow individual packages
-* Symlinks are managed automatically by Stow
-* Run `stow -D <package>` to remove a package
-
