@@ -63,3 +63,7 @@ setopt HIST_IGNORE_SPACE       # Don't save commands starting with a space (grea
 
 # 4. Set safety/locking
 setopt HIST_FCNTL_LOCK         # Prevents corruption when multiple tabs write at once
+
+# --- man ---
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
