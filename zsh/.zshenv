@@ -6,7 +6,7 @@
 #
 # Over-writing this to use Secretive app
 #
-export SSH_AUTH_SOCK=/Users/mircea/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 #
 #
 export CLICOLOR=1
@@ -18,5 +18,6 @@ export BAT_THEME='gruvbox-dark'
 # Set PURE_GIT_PULL=0 to prevent Pure from checking whether the current Git remote has been updated.
 #
 export PURE_GIT_PULL=0
-
+#
+#
 export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
