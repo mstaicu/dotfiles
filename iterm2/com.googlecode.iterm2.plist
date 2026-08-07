@@ -395,27 +395,31 @@
 	<string>558EEE29-3D11-4663-9575-2D1988467D81</string>
 	<key>GlobalKeyMap</key>
 	<dict>
-		<key>0x19-0x60000-0x0</key>
+		<key>0x19-0x60000-0x30</key>
 		<dict>
 			<key>Action</key>
 			<integer>2</integer>
-			<key>Label</key>
-			<string></string>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
 			<key>Version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
-		<key>0x9-0x40000-0x0</key>
+		<key>0x9-0x40000-0x30</key>
 		<dict>
 			<key>Action</key>
 			<integer>0</integer>
-			<key>Label</key>
-			<string></string>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
 			<key>Version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>0xf700-0x300000</key>
 		<dict>
