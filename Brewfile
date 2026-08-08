@@ -1,8 +1,6 @@
 # -----------------------------
 # Taps
 # -----------------------------
-tap "fluxcd/tap"
-tap "hashicorp/tap"
 tap "nats-io/nats-tools"
 tap "patrickdappollonio/tap"
 
@@ -42,9 +40,9 @@ brew "patrickdappollonio/tap/kubectl-slice"
 # Cloud / Infrastructure
 # -----------------------------
 # brew "awscli"
-brew "doctl"
+# brew "doctl"
 # brew "hashicorp/tap/terraform"
-brew "hashicorp/tap/packer"
+# brew "hashicorp/tap/packer"
 
 
 # -----------------------------
@@ -66,15 +64,15 @@ brew "age"
 # -----------------------------
 # Messaging / Streaming
 # -----------------------------
-brew "nats-io/nats-tools/nats"
-brew "nats-io/nats-tools/nsc"
+# brew "nats-io/nats-tools/nats"
+# brew "nats-io/nats-tools/nsc"
 
 
 # -----------------------------
 # Networking / Utilities
 # -----------------------------
 # brew "bind"
-brew "ncftp"
+# brew "ncftp"
 brew "mkcert"
 
 
@@ -102,7 +100,7 @@ cask "visual-studio-code"
 
 # Useful apps
 # cask "slack"
-cask "mitmproxy"
+# cask "mitmproxy"
 # cask "lm-studio"
 cask "secretive"
 
