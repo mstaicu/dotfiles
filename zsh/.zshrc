@@ -32,7 +32,6 @@ command -v kubectl &>/dev/null && source <(kubectl completion zsh)
 command -v flux &>/dev/null && source <(flux completion zsh)
 command -v docker &>/dev/null && source <(docker completion zsh)
 command -v skaffold &>/dev/null && source <(skaffold completion zsh)
-command -v helm &>/dev/null && source <(helm completion zsh)
 
 # ----- Aliases -----
 # $ man ls
@@ -51,6 +50,7 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 # 1. Essential: Share history across all sessions immediately
+setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # 2. Add timestamps (required for good history management)
